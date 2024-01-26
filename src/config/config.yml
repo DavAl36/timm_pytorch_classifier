@@ -1,0 +1,19 @@
+dataset:
+  folder: /all_data/dataset/[DATASET NAME]
+  resize_width: 256
+  resize_height: 256
+  train_size: 0.70
+  test_size: 0.15
+  valid_size: 0.15
+  num_workers: 8
+train:
+  model_name: resnet18
+  base_model_path: /all_data/base_model/
+  batch_size: 8 
+  epochs: 15
+  folder_pth: /all_data/trained_models/
+  learning_rate: 0.001
+evaluate:
+  checkpoint_path: /lightning_logs/version_0/checkpoints/[NAME].ckpt
+report:
+  folder: /all_data/reports/
