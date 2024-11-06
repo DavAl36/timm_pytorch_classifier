@@ -22,7 +22,7 @@ class CustomDataset(Dataset):
         images = []
         for class_name in self.classes:
             class_path = os.path.join(self.root_dir, class_name)
-            for img_path in glob(os.path.join(class_path, '*.png')):
+            for img_path in glob(os.path.join(class_path, '*.[jp][pn]g')):  # both .jpg and .png
                 images.append((img_path, self.class_to_index[class_name]))
         return images
 
